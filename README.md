@@ -148,5 +148,7 @@ A modal interface allows admins to pick a date and add multiple time slots effic
 | `POST` | `/slots` | Create a new time slot |
 | `POST` | `/bookings` | Book a time slot |
 
+Link - [DocBook](https://doctorbook-ten.vercel.app/)
+
 ---
 © 2025 DocBook. Premium Healthcare Scheduling.
