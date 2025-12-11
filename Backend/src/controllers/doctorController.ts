@@ -24,6 +24,16 @@ export const createDoctor = async (req: Request, res: Response) => {
     }
 };
 
+export const deleteDoctor = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    try {
+        await prisma.doctor.delete({ where: { id } });
+        res.json({ message: 'Doctor deleted successfully' });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to delete doctor' });
+    }
+};
+
 export const getDoctors = async (req: Request, res: Response) => {
     const doctors = await prisma.doctor.findMany({ include: { slots: true } });
     res.json(doctors);

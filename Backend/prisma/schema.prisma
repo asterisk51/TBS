@@ -20,7 +20,7 @@ model Slot {
   id        String    @id @default(uuid())
   time      DateTime
   doctorId  String
-  doctor    Doctor    @relation(fields: [doctorId], references: [id])
+  doctor    Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
   isBooked  Boolean   @default(false)
   version   Int       @default(0)
   bookings  Booking[]
@@ -39,7 +39,7 @@ model Booking {
   id        String        @id @default(uuid())
   userId    String
   slotId    String
-  slot      Slot          @relation(fields: [slotId], references: [id])
+  slot      Slot          @relation(fields: [slotId], references: [id], onDelete: Cascade)
   status    BookingStatus @default(PENDING)
   createdAt DateTime      @default(now())
   updatedAt DateTime      @updatedAt
