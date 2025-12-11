@@ -1,4 +1,4 @@
-# DocBook - Premium Healthcare Scheduling
+# [DocBook](https://doctorbook-ten.vercel.app/) - Premium Healthcare Scheduling
 
 DocBook is a modern, full-stack web application designed to streamline doctor appointment booking. It features a beautiful, responsive frontend for patients and a powerful dashboard for administrators to manage doctors and schedules.
 
@@ -147,8 +147,6 @@ A modal interface allows admins to pick a date and add multiple time slots effic
 | `GET` | `/doctors/:id/slots` | Get slots for a specific doctor |
 | `POST` | `/slots` | Create a new time slot |
 | `POST` | `/bookings` | Book a time slot |
-
-Link - [DocBook](https://doctorbook-ten.vercel.app/)
 
 ---
 © 2025 DocBook. Premium Healthcare Scheduling.
